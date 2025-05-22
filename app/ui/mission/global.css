@@ -1,0 +1,25 @@
+.description {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.text p > div {
+  display: block;
+  background: linear-gradient(
+    to right,
+    rgb(6, 6, 6) 50%,
+    rgb(148, 148, 148) 50%
+  );    background-size: 200% 100%;
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+  font-size: 3.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.text > p > span {
+  outline: 1px solid red;
+}

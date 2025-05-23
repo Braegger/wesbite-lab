@@ -5,12 +5,14 @@ import "./global.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText"; // nur mit GSAP-Club-Zugang
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export function Mission() {
   const paragraphRef = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
+  const t = useTranslations("Mission");
 
   useEffect(() => {
     console.clear();
@@ -63,13 +65,7 @@ export function Mission() {
               <div>
                 <div data-animation="paragraph">
                   <div className="text">
-                    <p ref={paragraphRef}>
-                      Die VGT Plattform bietet eine Vielzahl an Produkten, die
-                      dir helfen, deine Flexibilität optimal zu nutzen, Kosten
-                      zu minimieren und gleichzeitig den Energieverbrauch
-                      effizient zu steuern. Entdecke unsere Lösungen in den
-                      folgenden Bereichen:
-                    </p>
+                    <p ref={paragraphRef}>{t("title")}</p>
                   </div>
                 </div>{" "}
               </div>

@@ -5,18 +5,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
-import { scrollAnimation } from "@/app/lib/animation";
+import { scrollAnimation } from "@/src/app/[locale]/lib/animation";
 import { List } from "../card/list";
 import { AnimatePresence } from "motion/react";
 import { Item } from "../card/item";
 import { Header } from "../header/header";
 import { Mission } from "../mission/mission";
+import { useTranslations } from "next-intl";
 
 export default function IntroScreen() {
   const wrapperRef = useRef(null);
   const imgRef = useRef(null);
   const heroRef = useRef(null);
   const introTextRef = useRef(null);
+
+  const t = useTranslations("Intro");
 
   const [selectedId, setSelectedId] = useState("");
 
@@ -45,10 +48,7 @@ export default function IntroScreen() {
           <Header />
           <section className="section hero" ref={heroRef}>
             <div className="intro-text" ref={introTextRef}>
-              <h3>
-                Die Lösung für intelligentes Flexibilitätsmanagement und
-                Kundenzufriedenheit
-              </h3>
+              <h3>{t("title")}</h3>
             </div>
           </section>
           <div className="image-container">

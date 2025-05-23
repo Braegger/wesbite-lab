@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import React, { useEffect, useState } from "react";
 import { Menu } from "./menu";
 import "./global.css";
+import LocaleSwitcher from "../locale/LocaleSwitcher";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +36,9 @@ export function Header() {
               height={160}
               alt="Platform logo as svg"
             />
+            <div className="mb-[2px] flex items-center">
+              <LocaleSwitcher />
+            </div>
           </a>
           <div className="flex items-center gap-x-5 s:gap-x-24">
             <button

@@ -5,9 +5,12 @@ import dynamic from "next/dynamic";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-  const IntroScreen = dynamic(() => import("@/app/ui/intro/intro-screen"), {
-    ssr: false,
-  });
+  const IntroScreen = dynamic(
+    () => import("@/src/app/[locale]/ui/intro/intro-screen"),
+    {
+      ssr: false,
+    }
+  );
 
   useEffect(() => {
     setIsClient(true);

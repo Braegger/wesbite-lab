@@ -1,0 +1,12 @@
+{
+  "Mission": {
+    "title": "The VGT platform offers a variety of products that help you make optimal use of your flexibility, minimize costs, and efficiently manage energy consumption. Discover our solutions in the following areas:"
+  },
+    "Intro": {
+      "title": "The solution for intelligent flexibility management and customer satisfaction"
+    },
+ "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  }
+}
